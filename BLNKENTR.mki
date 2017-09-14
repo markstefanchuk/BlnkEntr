@@ -1,0 +1,22 @@
+#----------------------------------------------------------------------
+#
+#   MDL Make File
+#   name    BLNKENTR.mki
+#		   													
+#          																
+#----------------------------------------------------------------------
+appName 	= BLNKENTR
+sAppName	= BLNKENTR
+
+maRscs = $(reqdObjs)$(appName).mi
+
+$(mdlapps)$(appName).ma		: $(maRscs)
+    $(msg)
+    > $(rscObjects)make.opt
+    -o$@
+    $(maRscs)
+    <
+    $(RLibCmd) @$(rscObjects)make.opt
+    ~time
+
+# End of build.

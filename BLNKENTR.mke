@@ -1,0 +1,62 @@
+#----------------------------------------------------------------------
+#
+#   MDL Make File
+#   name    BLNKENTR.mke													
+#----------------------------------------------------------------------
+appName = BLNKENTR
+sAppName = BLNKENTR
+
+baseDir    = Z:/Documents/GitHub/BlnkEntr/
+privateInc = $(baseDir)
+langSpec	= $(baseDir)english/
+
+#%include $(MS)mdl/include/mdl.mki
+%include mdl.mki
+
+
+appObjects =		    \
+    $(o)$(appName).mo	    \
+    $(mdlLibs)mdllib.dlo    \
+    $(mdlLibs)ditemlib.dlo
+
+appRscs = \
+   $(o)$(appName).mp
+#   $(o)$(appName)cmd.rsc
+
+#----------------------------------------------------------
+# Create needed output directories if they don't exist
+#----------------------------------------------------------
+$(o)$(tstdir)			: $(o)$(tstdir)
+
+$(rscObjects)$(tstdir)		: $(rscObjects)$(tstdir)
+
+$(reqdObjs)$(tstdir)		: $(reqdObjs)$(tstdir)
+
+#$(genSrc)$(sAppName)cmd.h	: $(baseDir)$(sAppName)cmd.r
+#
+#$(rscObjects)$(sAppName)cmd.rsc : $(baseDir)$(sAppName)cmd.r
+#$(genSrc)$(sAppName)cmd.h
+
+$(o)$(appName).mo		: $(baseDir)$(appName).mc 
+
+$(o)$(appName).mp			: $(appObjects)
+    $(msg)
+    > $(o)make.opt
+    $(linkOpts)
+    -a$@
+    $(appObjects)
+    <
+    $(MLinkCmd) @$(o)make.opt
+    ~time
+
+$(reqdObjs)$(appName).mi		: $(appRscs)
+    $(msg)
+    > $(o)make.opt
+    -o$@
+    $(appRscs)
+    <
+    $(RLibCmd) @$(o)make.opt
+	~time
+
+%include $(baseDir)$(sAppName).mki
+
