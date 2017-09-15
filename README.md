@@ -1,5 +1,5 @@
 # BlnkEntr
-Blank Enter Data Fields for MicroStation V8i
+Blank Enter Data Fields for MicroStation V8i (MDL)
 
 MDL add-in for Bentley Systems' MicroStation CAD program.
 
