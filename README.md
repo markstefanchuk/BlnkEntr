@@ -3,6 +3,8 @@ Blank Enter Data Fields for MicroStation V8i
 
 MDL add-in for Bentley Systems' MicroStation CAD program.
 
+Original Program by: G. Houck of systems HK
+
 BLNKENTR.mc -- Fence Blank/Justify EnterData Fields Application
 ---------------------------------------------------------------------
 This MDL application processes some or all of the Enter Data fields
@@ -51,4 +53,4 @@ BLNKENTR.TXT - the first part of this readme. was included with the original cod
 blnkentr.zip - old version of these files. Saved in case someone wants to 
 recompile for an older (different version) of MicroStation
 OLDBLNKENTR.MA - original (as I received it) compile of BLNKENTR.MA. Will 
-not run on V8i. I'm pretty sure this was built for V7 or earlier.
+not run on V8i. I'm pretty sure this was built for V5 or earlier.
