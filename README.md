@@ -53,4 +53,5 @@ BLNKENTR.TXT - the first part of this readme. was included with the original cod
 blnkentr.zip - old version of these files. Saved in case someone wants to 
 recompile for an older (different version) of MicroStation
 OLDBLNKENTR.MA - original (as I received it) compile of BLNKENTR.MA. Will 
-not run on V8i. I'm pretty sure this was built for V5 or earlier.
+not run on V8i. I'm pretty sure this was built for V5 or earlier. Possibly
+updated for V7 (not tested).
